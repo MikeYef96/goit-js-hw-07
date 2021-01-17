@@ -20,7 +20,6 @@ const createBoxes = (amount) => {
 };
 
 const createRandomColor = () => Math.floor(Math.random() * 256);
-
 const destroyBoxes = () => (divBoxesRef.textContent = "");
 
 renderBtnRef.addEventListener("click", getNewElement);
