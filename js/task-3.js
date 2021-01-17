@@ -16,7 +16,6 @@ const images = [
   },
 ];
 
-//РЕПЕТА В СВОЕМ ВЕБИНАРЕ ГОВОРИЛ ЮЗАТЬ createElement
 const galleryRef = document.getElementById("gallery");
 images.forEach((image) => {
   gallery.insertAdjacentHTML(
