@@ -16,14 +16,16 @@ const images = [
   },
 ];
 
+//НО ТАКИМ ОБРАЗОМ ПОЛУЧАЕТСЯ МНОГО КОДА=) ИЛИ В ДАННОЙ СИТУАЦИИ ЭТО ПОДХОДИТ?
 const galleryRef = document.getElementById("gallery");
 images.forEach((image) => {
-  gallery.insertAdjacentHTML(
-    "beforeend",
-    `<li>
-      <img src = "${image.url}"  alt = "${image.alt}" width = "250px" height = "150px"/>
-    </li>`
-  );
+  const liElement = document.createElement("li");
+  const imgElement = document.createElement("img");
+  imgElement.setAttribute("src", image.url);
+  imgElement.setAttribute("alt", image.alt);
+  imgElement.style.cssText = "width:350px; height:250px";
+  liElement.append(imgElement);
+  galleryRef.append(liElement);
 });
 galleryRef.style.display = "flex";
 console.log(galleryRef);

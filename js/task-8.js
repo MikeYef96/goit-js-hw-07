@@ -13,13 +13,14 @@ const createBoxes = (amount) => {
   for (let index = 0; index < amount; index++) {
     const divBox = document.createElement("div");
     const divBoxSize = startSize + index * 10;
-    divBox.style.cssText = `width: ${divBoxSize}px; height: ${divBoxSize}px; background-color: rgb(${createRandomColor()},${createRandomColor()},${createRandomColor()})`;
+    divBox.style.cssText = `width: ${divBoxSize}px; height: ${divBoxSize}px;`;
+    divBox.style.backgroundColor = `rgb(${randomColor()},${randomColor()},${randomColor()})`;
     newFragment.append(divBox);
   }
   divBoxesRef.append(newFragment);
 };
 
-const createRandomColor = () => Math.floor(Math.random() * 256);
+const randomColor = () => Math.floor(Math.random() * 256);
 const destroyBoxes = () => (divBoxesRef.textContent = "");
 
 renderBtnRef.addEventListener("click", getNewElement);

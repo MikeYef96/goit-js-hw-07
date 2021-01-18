@@ -8,4 +8,4 @@ const checkValidInput = (event) => {
     : (userInput.style.borderColor = "#f44336");
 };
 
-userInput.addEventListener("change", checkValidInput);
+userInput.addEventListener("blur", checkValidInput);

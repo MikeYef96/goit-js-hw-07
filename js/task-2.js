@@ -10,7 +10,7 @@ const ingredients = [
 const listItemRef = document.querySelector("#ingredients");
 
 ingredients.forEach((item) => {
-  const newListItem = document.createElement("li").classList(".gallery__img");
+  const newListItem = document.createElement("li");
   newListItem.textContent = item;
   listItemRef.append(newListItem);
 });
