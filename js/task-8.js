@@ -1,6 +1,7 @@
 const renderBtnRef = document.querySelector('button[data-action="render"]');
 const destroyBtnRef = document.querySelector('button[data-action="destroy"]');
 const divBoxesRef = document.getElementById("boxes");
+const newFragment = document.createDocumentFragment();
 
 const getNewElement = () => {
   let amount = document.querySelector("#controls input").value;
@@ -8,7 +9,6 @@ const getNewElement = () => {
 };
 
 const createBoxes = (amount) => {
-  const newFragment = document.createDocumentFragment();
   let startSize = 30;
   for (let index = 0; index < amount; index++) {
     const divBox = document.createElement("div");
