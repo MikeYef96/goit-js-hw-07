@@ -27,8 +27,6 @@ const images = [
 // });
 // galleryRef.style.display = "flex";
 // console.log(galleryRef);
-
-//НО ТАКИМ ОБРАЗОМ ПОЛУЧАЕТСЯ МНОГО КОДА=) ИЛИ В ДАННОЙ СИТУАЦИИ ЭТО ПОДХОДИТ?
 const galleryRef = document.getElementById("gallery");
 images.forEach((image) => {
   const liElement = document.createElement("li");
@@ -41,3 +39,8 @@ images.forEach((image) => {
 });
 galleryRef.style.display = "flex";
 console.log(galleryRef);
+//
+//ПРИ КАЖДОМ ОБНОВЛЕНИИ СТРАНИЦЫ WIDTH & HEIGHT БУДУТ РАНДОМНЫМИ
+// const randomWidthHeight = Math.floor(Math.random() * 500);
+// imgElement.setAttribute("width", `${randomWidthHeight}px`);
+// imgElement.setAttribute("height", `${randomWidthHeight}px`);
